@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ManagerSpecialListViewModelBinding" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_iv"
+                style="@style/ManagerSpecial.ProductImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/title_manager_special"
+                tools:src="@drawable/ic_placeholder_gray_24dp"/>
+
+            <TextView
+                android:id="@+id/original_price_tv"
+                style="@style/ManagerSpecial.OriginalPrice"
+                app:layout_constraintTop_toTopOf="@+id/product_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                tools:text="$1.00" />
+
+            <TextView
+                android:id="@+id/sale_price_tv"
+                style="@style/ManagerSpecial.SalePrice"
+                app:layout_constraintTop_toBottomOf="@+id/original_price_tv"
+                app:layout_constraintStart_toStartOf="@+id/original_price_tv"
+                app:layout_constraintEnd_toEndOf="@+id/original_price_tv"
+                tools:text="$1.00" />
+
+            <TextView
+                android:id="@+id/product_name_tv"
+                style="@style/ManagerSpecial.ProductName"
+                app:layout_constraintTop_toBottomOf="@+id/product_iv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Noodle Dish with Roasted Black Bean Sauce" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="115dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+
+

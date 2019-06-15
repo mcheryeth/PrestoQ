@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PrestoQ</string>
+    <string name="title_manager_special">Manager\'s Special</string>
+    <string name="empty_manager_specials">There are no manager\'s specials today!</string>
+</resources>
