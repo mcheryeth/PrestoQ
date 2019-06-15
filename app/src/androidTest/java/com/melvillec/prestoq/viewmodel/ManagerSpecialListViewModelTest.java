@@ -1,10 +1,7 @@
 package com.melvillec.prestoq.viewmodel;
 
-import android.app.Application;
-
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule;
 import androidx.lifecycle.Observer;
-import androidx.test.core.app.ApplicationProvider;
 
 import com.melvillec.prestoq.data.Resource;
 import com.melvillec.prestoq.data.local.dao.ManagerSpecialDao;
@@ -47,7 +44,6 @@ public class ManagerSpecialListViewModelTest {
 
     @Before
     public void init() {
-        Application app = (Application) ApplicationProvider.getApplicationContext().getApplicationContext();
         managerSpecialListViewModel = new ManagerSpecialListViewModel(managerSpecialDao, managerSpecialApiService);
     }
 
